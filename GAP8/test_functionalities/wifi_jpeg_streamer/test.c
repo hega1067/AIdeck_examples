@@ -55,6 +55,26 @@ static void led_handle(void *arg)
 int main()
 {
   printf("Entering main controller...\n");
+  pi_freq_set(PI_FREQ_DOMAIN_FC, 150000000);
 
+  pi_gpio_pin_configure(&gpio_device, 2, PI_GPIO_OUTPUT);
+
+  pi_task_push_delayed_us(pi_task_callback(&led_task, led_handle, NULL), 500000);
+
+  if (open_wifi(&wifi))
+  {
+    printf("Failed to open wifi\n");
+    return -1;
+  }
+  printf("Opened WIFI\n");
+
+  printf("6\n");
+
+  while(1)
+  {
+    pi_yield();
+  }
+
+  return 0;
 
 }
