@@ -56,7 +56,7 @@ int main()
 {
   printf("Entering main controller...\n");
   pi_freq_set(PI_FREQ_DOMAIN_FC, 150000000);
-  printf("1")
+  printf("1");
   
 
 }
