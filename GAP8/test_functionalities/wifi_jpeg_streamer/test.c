@@ -6,12 +6,7 @@
 
 static pi_task_t task1;
 static pi_task_t task2;
-static unsigned char *imgBuff0;
-static unsigned char *imgBuff1;
-static struct pi_device camera;
 static struct pi_device wifi;
-static frame_streamer_t *streamer1;
-static frame_streamer_t *streamer2;
 static pi_buffer_t buffer;
 static pi_buffer_t buffer2;
 static volatile int stream1_done;
