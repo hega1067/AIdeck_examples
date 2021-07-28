@@ -4,14 +4,6 @@
 #include "tools/frame_streamer.h"
 #include "stdio.h"
 
-#if defined(CONFIG_GAPUINO) || defined(CONFIG_AI_DECK)
-#define CAM_WIDTH    324
-#define CAM_HEIGHT   244
-#else
-#define CAM_WIDTH    320
-#define CAM_HEIGHT   240
-#endif
-
 static pi_task_t task1;
 static pi_task_t task2;
 static unsigned char *imgBuff0;
